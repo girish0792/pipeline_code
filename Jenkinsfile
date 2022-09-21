@@ -11,6 +11,14 @@ pipeline
 				git ' https://github.com/keshavr21/maven_test.git '
 				}	
 			}
+			stage ( ' build ' )
+			{
+				steps
+				{
+				sh 'mvn clean package'
+				}
+			}
+
 		}
 	}
 				
